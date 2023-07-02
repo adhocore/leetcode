@@ -7,7 +7,7 @@ class Solution:
         return cts[0:k]
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     s = Solution()
     print(s.topKFrequent([1, 2, 1, 3, 4, 2, 1, 5, 7, 7, 7, 7, 7, 7, 7, 7], 2))
     # => [7, 5]
