@@ -3,6 +3,7 @@
 Just some (n|l)eet code solutions in Python.
 
 - [Container with max water](./containermaxwater.py)
+- [Eval reverse Polish notation](./evalrpn.py)
 - [Group anagrams together](./groupanagrams.py)
 - [Is Anagram](./isanagram.py)
 - [Longest consecutive seq](./longestconsecutiveseq.py)
