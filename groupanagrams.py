@@ -1,15 +1,13 @@
-class Solution:
-    def groupAnagrams(self, strs):
-        groups = {}
-        for s in strs:
-            s1 = "".join(sorted(s))
-            if not s1 in groups:
-                groups[s1] = []
-            groups[s1].append(s)
-        return groups.values()
+def group_anagrams(strings):
+    groups = {}
+    for s in strings:
+        s1 = "".join(sorted(s))
+        if s1 not in groups:
+            groups[s1] = []
+        groups[s1].append(s)
+    return groups.values()
 
 
 if __name__ == "__main__":
-    s = Solution()
-    print(s.groupAnagrams(["abc", "bac", "def", "fed", "efd", "ghi"]))
+    print(group_anagrams(["abc", "bac", "def", "fed", "efd", "ghi"]))
     # => [['abc', 'bac'], ['def', 'fed', 'efd'], ['ghi']]

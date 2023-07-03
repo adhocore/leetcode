@@ -1,16 +1,14 @@
-class Solution:
-    def isValidParens(self, s):
-        stak = []
-        pair = {")": "(", "}": "{", "]": "["}
-        for c in s:
-            if c == "(" or c == "{" or c == "[":
-                stak.append(c)
-            elif stak.pop() != pair[c]:
-                return False
-        return len(stak) == 0
+def is_valid_parens(s):
+    stack = []
+    pair = {")": "(", "}": "{", "]": "["}
+    for c in s:
+        if c in "({[":
+            stack.append(c)
+        elif c not in pair or stack.pop() != pair[c]:
+            return False
+    return len(stack) == 0
 
 
 if __name__ == "__main__":
-    s = Solution()
-    print(s.isValidParens("([]{})"))
+    print(is_valid_parens("([]{})"))
     # => True
