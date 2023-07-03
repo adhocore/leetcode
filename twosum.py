@@ -1,9 +1,13 @@
+"""Two items in a list that sums to given target
+"""
+
+
 def two_sum(nums, target):
     sums = {}
-    for i, n in enumerate(nums):
-        if n in sums:
-            return [sums[n], i + 1]
-        sums[target - n] = i + 1
+    for i, num in enumerate(nums):
+        if num in sums:
+            return [sums[num], i + 1]
+        sums[target - num] = i + 1
 
 
 if __name__ == "__main__":

@@ -1,10 +1,14 @@
+"""Container with maximum water
+"""
+
+
 def container_with_max_water(height):
     ans, count = height[0], len(height)
     for i in range(1, count - 2):
         j = count - i
-        w = j - i
-        h = min(height[i], height[j])
-        ans = max(w * h, ans)
+        wide = j - i
+        tall = min(height[i], height[j])
+        ans = max(wide * tall, ans)
     return ans
 
 

@@ -1,10 +1,14 @@
-def is_valid_parens(s):
+"""Check if parentheses valid and balanced
+"""
+
+
+def is_valid_parens(string):
     stack = []
     pair = {")": "(", "}": "{", "]": "["}
-    for c in s:
-        if c in "({[":
-            stack.append(c)
-        elif c not in pair or stack.pop() != pair[c]:
+    for char in string:
+        if char in "({[":
+            stack.append(char)
+        elif char not in pair or stack.pop() != pair[char]:
             return False
     return len(stack) == 0
 

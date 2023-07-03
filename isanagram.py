@@ -1,15 +1,19 @@
-def is_anagram(s, t):
-    if len(s) != len(t):
+"""Is one string anagram of another
+"""
+
+
+def is_anagram(string, target):
+    if len(string) != len(target):
         return False
-    cc = {}
-    for c in s:
-        cc[c] = cc[c] + 1 if c in cc else 1
-    for c in t:
-        if c not in cc:
+    counts = {}
+    for char in string:
+        counts[char] = counts.get(char, 0) + 1
+    for char in target:
+        if char not in counts:
             return False
-        cc[c] -= 1
-        if cc[c] == 0:
-            del cc[c]
+        counts[char] -= 1
+        if counts[char] == 0:
+            del counts[char]
     return True
 
 

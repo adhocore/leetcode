@@ -1,3 +1,7 @@
+"""Product of all elements in list except itself
+"""
+
+
 def product_except_self(nums):
     count = len(nums)
     res = [1] * count

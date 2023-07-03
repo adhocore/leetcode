@@ -1,14 +1,17 @@
+"""Three unique items in a list that sum to zero
+"""
+
+
 def three_sum_zero(nums: list[int]):
     res = set()  # a+b+c = 0 => c = -a-b
     count = len(nums)
-    for i, a in enumerate(nums):
+    for i in range(count):
         for j in range(i + 1, count):
-            b = nums[j]
             try:
-                k = nums.index(-a - b, j + 1)
-                pair = sorted([a, b, nums[k]])
+                k = nums.index(-nums[i] - nums[j], j + 1)
+                pair = sorted([nums[i], nums[j], nums[k]])
                 res.add(tuple(pair))
-            finally:
+            except ValueError:
                 pass
     return list(res)
 
