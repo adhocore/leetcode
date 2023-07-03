@@ -1,18 +1,22 @@
-def eval_rpn(tokens):
+"""Eval Reverse Polish Notation
+"""
+
+
+def eval_rpn(tokens: list[str]) -> int:
     stack = []
-    for i in range(len(tokens)):
-        if tokens[i] not in "+-*/":
-            stack.append(int(tokens[i]))
+    for i, token in enumerate(tokens):
+        if token not in "+-*/":
+            stack.append(int(token))
             continue
-        a, b = stack.pop(), stack.pop()
-        if tokens[i] == "+":
-            stack.append(b + a)
-        elif tokens[i] == "-":
-            stack.append(b - a)
-        elif tokens[i] == "*":
-            stack.append(b * a)
-        elif tokens[i] == "/":
-            stack.append(int(b / a))
+        right, left = stack.pop(), stack.pop()
+        if token == "+":
+            stack.append(left + right)
+        elif token == "-":
+            stack.append(left - right)
+        elif token == "*":
+            stack.append(left * right)
+        elif token == "/":
+            stack.append(int(left / right))
     return stack.pop()
 
 

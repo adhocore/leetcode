@@ -1,10 +1,14 @@
+"""Group Anagrams together
+"""
+
+
 def group_anagrams(strings):
     groups = {}
-    for s in strings:
-        s1 = "".join(sorted(s))
-        if s1 not in groups:
-            groups[s1] = []
-        groups[s1].append(s)
+    for string in strings:
+        sort = "".join(sorted(string))
+        if sort not in groups:
+            groups[sort] = []
+        groups[sort].append(string)
     return groups.values()
 
 

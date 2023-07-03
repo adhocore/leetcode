@@ -1,12 +1,16 @@
+"""Longest consecutive sequence in a list
+"""
+
+
 def longest_consecutive(nums):
     count, nums = len(nums), sorted(nums)
-    c, mx = 1, 1
-    for i, n in enumerate(nums):
-        if i < count - 1 and n + 1 == nums[i + 1]:
-            c += 1
+    run, ans = 1, 1
+    for i, num in enumerate(nums):
+        if i < count - 1 and num + 1 == nums[i + 1]:
+            run += 1
         else:
-            c, mx = 1, max(c, mx)
-    return mx
+            run, ans = 1, max(run, ans)
+    return ans
 
 
 if __name__ == "__main__":

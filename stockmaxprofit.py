@@ -1,3 +1,7 @@
+"""Max profit of a single transaction in stock sales
+"""
+
+
 def stock_max_profit(prices):
     profit, min_price = 0, prices[0]
     for i in range(1, len(prices) - 1):

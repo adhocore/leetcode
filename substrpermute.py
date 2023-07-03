@@ -1,14 +1,18 @@
-def check_str_permute_sub(s1, s2):
-    s1c, s2c = {}, {}
-    for c in s1:
-        s1c[c] = s1c.get(c, 0) + 1
-    for c in s2:
-        if c in s1c:
-            s2c[c] = s2c.get(c, 0) + 1
-            if s1c == s2c:
+"""Check if a string contains permutation of another string
+"""
+
+
+def check_str_permute_sub(string1, string2):
+    s1count, s2count = {}, {}
+    for char in string1:
+        s1count[char] = s1count.get(char, 0) + 1
+    for char in string2:
+        if char in s1count:
+            s2count[char] = s2count.get(char, 0) + 1
+            if s1count == s2count:
                 return True
         else:
-            s2c = {}
+            s2count = {}
     return False
 
 

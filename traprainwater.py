@@ -1,3 +1,7 @@
+"""Trap rain water in walls of given heights
+"""
+
+
 def trap_rain_water(height):
     count = len(height)
     left, rain = height[0], 0

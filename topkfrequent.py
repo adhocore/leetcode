@@ -1,7 +1,11 @@
+"""Top K frequent items in a list
+"""
+
+
 def top_k_frequent(nums, k):
     cts = {}
-    for n in nums:
-        cts[n] = cts.get(n, 0) + 1
+    for num in nums:
+        cts[num] = cts.get(num, 0) + 1
     cts = sorted(cts, reverse=True)
     return cts[0:k]
 
