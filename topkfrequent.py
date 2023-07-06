@@ -10,7 +10,7 @@ def top_k_frequent(nums: list[int], k: int) -> list[int]:
     cts = {}
     for num in nums:
         cts[num] = cts.get(num, 0) + 1
-    cts = {k: v for k, v in sorted(cts.items(), key=lambda item: item[1], reverse=True)}
+    cts = dict(sorted(cts.items(), key=lambda item: item[1], reverse=True))
     return list(cts)[0:k]
 
 

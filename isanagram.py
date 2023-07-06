@@ -22,7 +22,11 @@ def is_anagram(string: str, target: str) -> bool:
 
 
 # one line solution:
-def is_anagram2(string, target):
+def is_anagram2(string: str, target: str) -> bool:
+    """
+    Space Complexity: O(1)
+    Time Complexity:  O(m+n)
+    """
     return len(string) == len(target) and sorted(string) == sorted(target)
 
 
