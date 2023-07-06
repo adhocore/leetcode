@@ -2,7 +2,11 @@
 """
 
 
-def is_anagram(string, target):
+def is_anagram(string: str, target: str) -> bool:
+    """
+    Space Complexity: O(m)
+    Time Complexity:  O(m+n)
+    """
     if len(string) != len(target):
         return False
     counts = {}

@@ -3,6 +3,10 @@
 
 
 def eval_rpn(tokens: list[str]) -> int:
+    """
+    Space Complexity: O(1)
+    Time Complexity:  O(n)
+    """
     stack = []
     for i, token in enumerate(tokens):
         if token not in "+-*/":

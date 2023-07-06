@@ -2,7 +2,11 @@
 """
 
 
-def container_with_max_water(height):
+def container_with_max_water(height: list[int]) -> int:
+    """
+    Space Complexity: O(1)
+    Time Complexity:  O(n)
+    """
     ans, count = height[0], len(height)
     for i in range(1, count - 2):
         j = count - i

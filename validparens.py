@@ -2,7 +2,11 @@
 """
 
 
-def is_valid_parens(string):
+def is_valid_parens(string: str) -> bool:
+    """
+    Space Complexity: O(n)
+    Time Complexity:  O(n)
+    """
     stack = []
     pair = {")": "(", "}": "{", "]": "["}
     for char in string:

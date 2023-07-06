@@ -2,7 +2,11 @@
 """
 
 
-def longest_consecutive(nums):
+def longest_consecutive(nums: list[int]) -> int:
+    """
+    Space Complexity: O(1)
+    Time Complexity:  O(n)
+    """
     count, nums = len(nums), sorted(nums)
     run, ans = 1, 1
     for i, num in enumerate(nums):

@@ -2,11 +2,15 @@
 """
 
 
-def length_of_longest_substring(string):
+def length_of_longest_substring(string: str) -> int:
+    """
+    Space Complexity: O(n)
+    Time Complexity:  O(n)
+    """
     left, right, max_left, win = 0, 0, 0, {}
     while right < len(string):
         if not win.get(string[right]):
-            win[string[right]] = (True,)
+            win[string[right]] = True
             max_left = max(right - left + 1, max_left)
         else:
             while string[left] != string[right]:

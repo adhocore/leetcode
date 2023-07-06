@@ -2,7 +2,11 @@
 """
 
 
-def top_k_frequent(nums, k):
+def top_k_frequent(nums: list[int], k: int) -> list[int]:
+    """
+    Space Complexity: O(n)
+    Time Complexity:  O(n)
+    """
     cts = {}
     for num in nums:
         cts[num] = cts.get(num, 0) + 1
