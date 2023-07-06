@@ -8,7 +8,7 @@ def eval_rpn(tokens: list[str]) -> int:
     Time Complexity:  O(n)
     """
     stack = []
-    for i, token in enumerate(tokens):
+    for token in tokens:
         if token not in "+-*/":
             stack.append(int(token))
             continue

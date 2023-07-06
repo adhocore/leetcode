@@ -16,4 +16,4 @@ def top_k_frequent(nums: list[int], k: int) -> list[int]:
 
 if __name__ == "__main__":
     print(top_k_frequent([1, 2, 1, 3, 4, 2, 1, 5, 7, 7, 7, 7, 7, 7, 7, 7], 2))
-    # => [7, 5]
+    # => [7, 1]
