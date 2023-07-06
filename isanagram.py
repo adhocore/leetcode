@@ -18,8 +18,8 @@ def is_anagram(string, target):
 
 
 # one line solution:
-def is_anagram2(s, t):
-    return len(s) == len(t) and sorted(s) == sorted(t)
+def is_anagram2(string, target):
+    return len(string) == len(target) and sorted(string) == sorted(target)
 
 
 if __name__ == "__main__":
