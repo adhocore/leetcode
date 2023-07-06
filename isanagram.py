@@ -2,7 +2,11 @@
 """
 
 
-def is_anagram(string, target):
+def is_anagram(string: str, target: str) -> bool:
+    """
+    Space Complexity: O(m)
+    Time Complexity:  O(m+n)
+    """
     if len(string) != len(target):
         return False
     counts = {}
@@ -18,8 +22,8 @@ def is_anagram(string, target):
 
 
 # one line solution:
-def is_anagram2(s, t):
-    return len(s) == len(t) and sorted(s) == sorted(t)
+def is_anagram2(string, target):
+    return len(string) == len(target) and sorted(string) == sorted(target)
 
 
 if __name__ == "__main__":

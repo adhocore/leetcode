@@ -2,7 +2,11 @@
 """
 
 
-def product_except_self(nums):
+def product_except_self(nums: list[int]) -> list[int]:
+    """
+    Space Complexity: O(n)
+    Time Complexity:  O(n+n) => O(n)
+    """
     count = len(nums)
     res = [1] * count
     pre, post, zero = 1, 1, 0

@@ -2,12 +2,16 @@
 """
 
 
-def top_k_frequent(nums, k):
+def top_k_frequent(nums: list[int], k: int) -> list[int]:
+    """
+    Space Complexity: O(n)
+    Time Complexity:  O(n)
+    """
     cts = {}
     for num in nums:
         cts[num] = cts.get(num, 0) + 1
-    cts = sorted(cts, reverse=True)
-    return cts[0:k]
+    cts = {k: v for k, v in sorted(cts.items(), key=lambda item: item[1], reverse=True)}
+    return list(cts)[0:k]
 
 
 if __name__ == "__main__":

@@ -2,7 +2,11 @@
 """
 
 
-def stock_max_profit(prices):
+def stock_max_profit(prices: list[int]) -> int:
+    """
+    Space Complexity: O(1)
+    Time Complexity:  O(n)
+    """
     profit, min_price = 0, prices[0]
     for i in range(1, len(prices) - 1):
         if prices[i] < min_price:

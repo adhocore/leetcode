@@ -2,7 +2,11 @@
 """
 
 
-def trap_rain_water(height):
+def trap_rain_water(height: list[int]) -> int:
+    """
+    Space Complexity: O(1)
+    Time Complexity:  O(n^2)
+    """
     count = len(height)
     left, rain = height[0], 0
     for i in range(1, count):

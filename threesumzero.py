@@ -2,7 +2,11 @@
 """
 
 
-def three_sum_zero(nums: list[int]):
+def three_sum_zero(nums: list[int]) -> list:
+    """
+    Space Complexity: O(n/3) => O(n)
+    Time Complexity:  O(n^2)
+    """
     res = set()  # a+b+c = 0 => c = -a-b
     count = len(nums)
     for i in range(count):
